@@ -68,8 +68,8 @@ class OcsaConverter{
             host:'smtp.gmail.com',
             port: 465,
             auth:{
-                user:'tpartcal@gmail.com',
-                pass:'TP2013bb!'
+                user:'',
+                pass:''
             }
         }));
 
