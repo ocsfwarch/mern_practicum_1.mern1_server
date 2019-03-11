@@ -6,7 +6,7 @@ This is a practicum for the MERN stack, the goal is to build a full stack Javasc
 This application is composed of 2 main components: Front-end Web GUI (mern1_app) and Back-end Web Server (mern1_server). Communication between the front-end and back-end elements is structured and performed in a RESTful manner. The front-end will make requests to the back-end using http url command requests and json formatted parameters. The back-end will respond to these requests with json formatted data. Back-end serialization of data will be achieved using a NoSQL (MongoDB) database and local storage.  
 
 Overview - mern1_server:  
-This server application is based on the Express Web Framework for Node.js. All interaction with this server application are performed using RESTful transactions. This server application is not tied to any particular front-end GUI. This server application uses the MongoDB document database program for serialization of transcription requests. This server application also uses the system local storage for preservation of file downloads and uploads. 
+This server application is based on the Express Web Framework for Node.js. All interactions with this server application are performed using RESTful transactions. This server application is not tied to any particular front-end GUI. This server application uses the MongoDB document database program for serialization of transcription requests. This server application also uses the system local storage for preservation of file downloads and uploads. 
 
 This server application uses the Google "Cloud-to-Text" client library api for transcribing uploaded audio files to text. To access the Google client library a GCP Console project was required as well as establishing an environment variable (GOOGLE_APPLICATION_CREDENTIALS) that points to a JSON formatted file containing the service account key values for "OAuth 2.0" authorization.  
   
@@ -20,7 +20,7 @@ The System will store the request object to MongoDB.
 The System will construct a transcription request object.  
 The System will trigger the file conversion process ("OcsaConverter.performConversion()").  
 The System will return confirmation or rejection of the transcription request to the requestor.  
-The System will verify the "file_transcribe" boolean to determine if transcription is required.
+The System will verify the "file_transcribe" boolean to determine if transcription is required.  
 The System will create a transcription file name for storage of the transcribed results.  
 The System will initialize the Google "Cloud-to-Text" client library.  
 The System will upload the audio file for transcription to the Google "Cloud-to-Text" client library.  
