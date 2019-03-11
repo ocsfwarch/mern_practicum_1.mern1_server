@@ -34,9 +34,9 @@ class OcsaConverter{
             console.log("Does not need to be transcribed");
             objJson.file_path_trans = this.createTranscribedFilename(objJson.file_path);
             objJson.file_name_trans = this.createTranscribedFilename(objJson.file_name);
-            fs.copyFile(objJson.file_path, newFileAndPath, (err) => {
+            fs.copyFile(objJson.file_path, objJson.file_path_trans, (err) => {
                 if(err){
-                    console.log("There was an error copying the file");
+                    console.log("There was an error copying the file to " + objJson.file_path_trans);
                 }else{
                     console.log("File copy was successful");
                     this.sendEmail(objJson);
